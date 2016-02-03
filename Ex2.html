@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr" data-ng-app="ServiceApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="js/ServiceApp.js"></script>
+    <script src="js/ServiceController.js"></script>
+    <title>Services</title>
+</head>
+<body style="background-color: dodgerblue" data-ng-controller="ServiceController as ctrl">
+    <h1 style="color:white; text-align: center; width: 15%; margin-left: 5%">Services</h1>
+    <div class="panel panel-info" style="width:15%;margin-left: 5%">
+        <div class="panel-heading">Choisissez les éléments à inclure.<br/> <b>{{ctrl.nbSelect}} services sélectionnés</b></div>
+    </div>
+
+    <div style="line-height: 40px; width:15%; margin-left: 5%">
+        <button type="button" class="btn btn-info active" style="width:100%; background-color: limegreen"><div style="float: left">Web développement</div> <div style="float: right">300€</div></button><br/>
+        <button type="button" class="btn btn-info" style="width:100%; background-color: limegreen"><div style="float: left">Design</div> <div style="float: right">400€</div></button>
+        <button type="button" class="btn btn-info" style="width:100%; background-color: grey"><div style="float: left">Integration</div> <div style="float: right">250€</div></button>
+        <button type="button" class="btn btn-info" style="width:100%; background-color: grey"><div style="float: left">Formation</div> <div style="float: right">220€</div></button>
+        <hr />
+        <p style="float: left; color: white">Total: </p> <p style="float:right; color:white">{{ctrl.total}}€</p>
+    </div>
+</body>
+</html>

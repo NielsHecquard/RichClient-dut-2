@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr" data-ng-app="NoteApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="js/NoteApp.js"></script>
+    <script src="js/NoteController.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <title>Ex1: Note application</title>
+
+
+</head>
+<body data-ng-controller="NoteController as ctrl">
+    <h1>Ex1: Note application</h1>
+    <label>Note:</label> <br/>
+    <textarea data-ng-model="ctrl.message" class="form-control">{{ctrl.message}}</textarea>
+    <br/>
+    <button data-ng-show="ctrl.messageNote" class="btn btn-primary">Enregistrer</button>
+    <button data-ng-click="ctrl.save()" class="btn btn-primary">Enregistrer</button>
+    <button data-ng-click="ctrl.clear()" class="btn btn-primary">Effacer</button>
+    <br/>
+    <div data-ng-class="{'alert alert-info':ctrl.count()>50, 'alert alert-warning':ctrl.count()<50, 'alert alert-danger': ctrl.count()<20}" >
+        Nombre de caractères restants: {{ctrl.count()}}
+    </div>
+    <div data-ng-show="ctrl.info" class="alert alert-success" >
+        {{ctrl.info}}
+    </div>
+</body>
+</html>

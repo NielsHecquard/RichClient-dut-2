@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr" data-ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/myController.js"></script>
+    <title>Test Angular</title>
+</head>
+<body data-ng-controller="myController as ctrl">
+<button data-ng-click="ctrl.updateMessage()">Modifier message</button> <br/>
+{{ctrl.message}} <!-- on utilise le scope de message!-->
+</body>
+</html>
